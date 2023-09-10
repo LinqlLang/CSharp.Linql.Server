@@ -45,13 +45,17 @@ namespace Linql.Server.EF6.Test
 
             }
 
-            await this.Buildings.ToListAsync();
-
-            if (Reset == true)
+            try
             {
-                await this.RunScript("TableSetup.sql");
-                //await this.SeedDataInMemory();
-                await this.SeedDataFromFiles();
+                int count = await this.Buildings.CountAsync();
+
+                if (count == 0) 
+                {
+                    await this.SeedDataFromFiles();
+                }
+            }
+            catch(Exception e)
+            {
 
             }
         }
