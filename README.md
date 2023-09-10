@@ -120,7 +120,7 @@ public class StateController : ControllerBase
 ```
 ### Full Example
 
-Checkout our full example [here](https://github.com/LinqlLang/CSharp.Linql.Examples/WebApiExample/).
+Checkout our full example [here](https://github.com/LinqlLang/CSharp.Linql.Examples).
 
 ## Library Support
 ### EntityFramework 6
