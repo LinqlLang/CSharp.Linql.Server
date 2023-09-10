@@ -146,7 +146,7 @@ It's obviously advantageous to use Linql over your entire data model.  To do so,
 
 Find functionality built into the library allows application developers to search for patterns within linql searches in order to implement more advanced logic.  
 
-Find has two [options](https://github.com/LinqlLang/CSharp.Linql.Core/Linql.Core/LinqlFindOption.cs), Exact and Similar.  
+Find has two [options](https://github.com/LinqlLang/CSharp.Linql.Core/blob/master/Linql.Core/LinqlFindOption.cs), Exact and Similar.  
 
 Exact will only return results if the statements exactly match, while Similar will do its best to try and find things that relatively match.  Either method will recursively try to find the expression anywhere in the expression tree.  
 
