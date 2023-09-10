@@ -1,0 +1,10 @@
+C:\linqlNew\CSharp.Linql.Server\Linql.Server\bin\Debug\netstandard2.0\Linql.Server.deps.json
+C:\linqlNew\CSharp.Linql.Server\Linql.Server\bin\Debug\netstandard2.0\Linql.Server.dll
+C:\linqlNew\CSharp.Linql.Server\Linql.Server\bin\Debug\netstandard2.0\Linql.Server.pdb
+C:\linqlNew\CSharp.Linql.Server\Linql.Server\obj\Debug\netstandard2.0\Linql.Server.csproj.AssemblyReference.cache
+C:\linqlNew\CSharp.Linql.Server\Linql.Server\obj\Debug\netstandard2.0\Linql.Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\linqlNew\CSharp.Linql.Server\Linql.Server\obj\Debug\netstandard2.0\Linql.Server.AssemblyInfoInputs.cache
+C:\linqlNew\CSharp.Linql.Server\Linql.Server\obj\Debug\netstandard2.0\Linql.Server.AssemblyInfo.cs
+C:\linqlNew\CSharp.Linql.Server\Linql.Server\obj\Debug\netstandard2.0\Linql.Server.csproj.CoreCompileInputs.cache
+C:\linqlNew\CSharp.Linql.Server\Linql.Server\obj\Debug\netstandard2.0\Linql.Server.dll
+C:\linqlNew\CSharp.Linql.Server\Linql.Server\obj\Debug\netstandard2.0\Linql.Server.pdb

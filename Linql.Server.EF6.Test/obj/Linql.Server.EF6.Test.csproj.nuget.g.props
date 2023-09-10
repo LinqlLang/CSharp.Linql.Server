@@ -1,0 +1,558 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\Administrator\.nuget\packages\</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.4.1</NuGetToolVersion>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <SourceRoot Include="C:\Users\Administrator\.nuget\packages\" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\DataTypes\DateTime_Equals.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\DataTypes\DateTime_Equals.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\DataTypes\DateTime_Equals.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\DataTypes\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\DataTypes\DateTime_Equals.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\DataTypes\Guid.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\DataTypes\Guid.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\DataTypes\Guid.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\DataTypes\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\DataTypes\Guid.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Deserialization\Function.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Deserialization\Function.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Deserialization\Function.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Deserialization\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Deserialization\Function.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\SimpleExpressions\FunctionChaining.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\SimpleExpressions\FunctionChaining.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\SimpleExpressions\FunctionChaining.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\SimpleExpressions\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\SimpleExpressions\FunctionChaining.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\SimpleExpressions\LinqlBinary.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\SimpleExpressions\LinqlBinary.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\SimpleExpressions\LinqlBinary.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\SimpleExpressions\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\SimpleExpressions\LinqlBinary.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\SimpleExpressions\LinqlConstant.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\SimpleExpressions\LinqlConstant.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\SimpleExpressions\LinqlConstant.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\SimpleExpressions\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\SimpleExpressions\LinqlConstant.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\SimpleExpressions\LinqlFunction.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\SimpleExpressions\LinqlFunction.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\SimpleExpressions\LinqlFunction.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\SimpleExpressions\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\SimpleExpressions\LinqlFunction.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\SimpleExpressions\LinqlLambda.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\SimpleExpressions\LinqlLambda.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\SimpleExpressions\LinqlLambda.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\SimpleExpressions\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\SimpleExpressions\LinqlLambda.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\SimpleExpressions\LinqlObject.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\SimpleExpressions\LinqlObject.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\SimpleExpressions\LinqlObject.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\SimpleExpressions\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\SimpleExpressions\LinqlObject.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\SimpleExpressions\LinqlUnary.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\SimpleExpressions\LinqlUnary.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\SimpleExpressions\LinqlUnary.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\SimpleExpressions\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\SimpleExpressions\LinqlUnary.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\SimpleExpressions\NullableCheck.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\SimpleExpressions\NullableCheck.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\SimpleExpressions\NullableCheck.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\SimpleExpressions\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\SimpleExpressions\NullableCheck.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\SimpleExpressions\ToList.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\SimpleExpressions\ToList.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\SimpleExpressions\ToList.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\SimpleExpressions\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\SimpleExpressions\ToList.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\BooleanNegate.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\BooleanNegate.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\BooleanNegate.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\BooleanNegate.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\BooleanVar.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\BooleanVar.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\BooleanVar.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\BooleanVar.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\ComplexBoolean.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\ComplexBoolean.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\ComplexBoolean.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\ComplexBoolean.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\EmptyList.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\EmptyList.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\EmptyList.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\EmptyList.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\EmptySearch.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\EmptySearch.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\EmptySearch.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\EmptySearch.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\FirstOrDefault.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\FirstOrDefault.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\FirstOrDefault.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\FirstOrDefault.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\FirstOrDefaultWithPredicate.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\FirstOrDefaultWithPredicate.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\FirstOrDefaultWithPredicate.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\FirstOrDefaultWithPredicate.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\InnerLambda.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\InnerLambda.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\InnerLambda.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\InnerLambda.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\Inner_Lambda.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\Inner_Lambda.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\Inner_Lambda.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\Inner_Lambda.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\LastOrDefault.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\LastOrDefault.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\LastOrDefault.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\LastOrDefault.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\LastOrDefaultWithPredicate.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\LastOrDefaultWithPredicate.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\LastOrDefaultWithPredicate.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\LastOrDefaultWithPredicate.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\LinqlObject.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\LinqlObject.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\LinqlObject.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\LinqlObject.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\LinqlObject_NonZero.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\LinqlObject_NonZero.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\LinqlObject_NonZero.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\LinqlObject_NonZero.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\ListInt.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\ListInt.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\ListInt.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\ListInt.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\ListIntFromProperty.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\ListIntFromProperty.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\ListIntFromProperty.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\ListIntFromProperty.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\List_Empty_Contains.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\List_Empty_Contains.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\List_Empty_Contains.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\List_Empty_Contains.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\List_Int_Contains.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\List_Int_Contains.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\List_Int_Contains.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\List_Int_Contains.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\List_Int_Count.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\List_Int_Count.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\List_Int_Count.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\List_Int_Count.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\NullableHasValue.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\NullableHasValue.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\NullableHasValue.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\NullableHasValue.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\NullableValue.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\NullableValue.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\NullableValue.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\NullableValue.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\ObjectCalculationWithNull.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\ObjectCalculationWithNull.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\ObjectCalculationWithNull.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\ObjectCalculationWithNull.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\ObjectCalculationWithoutNull.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\ObjectCalculationWithoutNull.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\ObjectCalculationWithoutNull.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\ObjectCalculationWithoutNull.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\SelectMany.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\SelectMany.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\SelectMany.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\SelectMany.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\SelectManyDouble.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\SelectManyDouble.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\SelectManyDouble.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\SelectManyDouble.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\Select_Test.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\Select_Test.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\Select_Test.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\Select_Test.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\SimpleBooleanFalse.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\SimpleBooleanFalse.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\SimpleBooleanFalse.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\SimpleBooleanFalse.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\SimpleBooleanProperty.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\SimpleBooleanProperty.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\SimpleBooleanProperty.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\SimpleBooleanProperty.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\SimpleBooleanPropertyChaining.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\SimpleBooleanPropertyChaining.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\SimpleBooleanPropertyChaining.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\SimpleBooleanPropertyChaining.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\SimpleBooleanPropertyEquals.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\SimpleBooleanPropertyEquals.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\SimpleBooleanPropertyEquals.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\SimpleBooleanPropertyEquals.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\SimpleBooleanPropertyEqualsSwap.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\SimpleBooleanPropertyEqualsSwap.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\SimpleBooleanPropertyEqualsSwap.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\SimpleBooleanPropertyEqualsSwap.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\SimpleConstant.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\SimpleConstant.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\SimpleConstant.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\SimpleConstant.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\SkipTake.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\SkipTake.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\SkipTake.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\SkipTake.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\String_Contains.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\String_Contains.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\String_Contains.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\String_Contains.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\ThreeBooleans.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\ThreeBooleans.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\ThreeBooleans.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\ThreeBooleans.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\ToListAsync.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\ToListAsync.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\ToListAsync.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\ToListAsync.json</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\TwoBooleans.json" Condition="Exists('$(NuGetPackageRoot)linql.test.files\1.0.0-alpha248\contentFiles\any\netstandard2.0\TestFiles\Smoke\TwoBooleans.json')">
+      <NuGetPackageId>Linql.Test.Files</NuGetPackageId>
+      <NuGetPackageVersion>1.0.0-alpha248</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>TestFiles\Smoke\TwoBooleans.json</TargetPath>
+      <DestinationSubDirectory>TestFiles\Smoke\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>TestFiles\Smoke\TwoBooleans.json</Link>
+    </Content>
+  </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)nunit3testadapter\4.2.1\build\netcoreapp2.1\NUnit3TestAdapter.props" Condition="Exists('$(NuGetPackageRoot)nunit3testadapter\4.2.1\build\netcoreapp2.1\NUnit3TestAdapter.props')" />
+    <Import Project="$(NuGetPackageRoot)nunit\3.13.3\build\NUnit.props" Condition="Exists('$(NuGetPackageRoot)nunit\3.13.3\build\NUnit.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.testplatform.testhost\17.3.2\build\netcoreapp2.1\Microsoft.TestPlatform.TestHost.props" Condition="Exists('$(NuGetPackageRoot)microsoft.testplatform.testhost\17.3.2\build\netcoreapp2.1\Microsoft.TestPlatform.TestHost.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codecoverage\17.3.2\build\netstandard1.0\Microsoft.CodeCoverage.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codecoverage\17.3.2\build\netstandard1.0\Microsoft.CodeCoverage.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.net.test.sdk\17.3.2\build\netcoreapp2.1\Microsoft.NET.Test.Sdk.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.test.sdk\17.3.2\build\netcoreapp2.1\Microsoft.NET.Test.Sdk.props')" />
+    <Import Project="$(NuGetPackageRoot)entityframework\6.4.4\buildTransitive\netcoreapp3.0\EntityFramework.props" Condition="Exists('$(NuGetPackageRoot)entityframework\6.4.4\buildTransitive\netcoreapp3.0\EntityFramework.props')" />
+  </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgNUnit_Analyzers Condition=" '$(PkgNUnit_Analyzers)' == '' ">C:\Users\Administrator\.nuget\packages\nunit.analyzers\3.3.0</PkgNUnit_Analyzers>
+    <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">C:\Users\Administrator\.nuget\packages\newtonsoft.json\9.0.1</PkgNewtonsoft_Json>
+    <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\Administrator\.nuget\packages\entityframework\6.4.4</PkgEntityFramework>
+  </PropertyGroup>
+</Project>
