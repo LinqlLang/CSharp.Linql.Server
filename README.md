@@ -27,7 +27,7 @@ object genericData = this.Compiler.Execute(search, this.Data);
 
 ```
 
-[Linql Overview](../../README.md)
+[Linql Overview](https://github.com/LinqlLang/Linql)
 
 ## Installation
 
@@ -120,12 +120,12 @@ public class StateController : ControllerBase
 ```
 ### Full Example
 
-Checkout our full example [here](../Examples/WebApiExample/).
+Checkout our full example [here](https://github.com/LinqlLang/CSharp.Linql.Examples/WebApiExample/).
 
 ## Library Support
 ### EntityFramework 6
 
-Linql is compatible with EntityFramework 6.  There are tests [here](../Test/Linql.Server.EF6.Test/).
+Linql is compatible with EntityFramework 6.  There are tests [here](./Linql.Server.EF6.Test/).
 
 ### EntityFramework Core
 
@@ -146,7 +146,7 @@ It's obviously advantageous to use Linql over your entire data model.  To do so,
 
 Find functionality built into the library allows application developers to search for patterns within linql searches in order to implement more advanced logic.  
 
-Find has two [options](../Linql.Core/LinqlFindOption.cs), Exact and Similar.  
+Find has two [options](https://github.com/LinqlLang/CSharp.Linql.Core/Linql.Core/LinqlFindOption.cs), Exact and Similar.  
 
 Exact will only return results if the statements exactly match, while Similar will do its best to try and find things that relatively match.  Either method will recursively try to find the expression anywhere in the expression tree.  
 
@@ -264,4 +264,4 @@ In conjunction with Linql's Find functionality and lifecycle hooks, this strateg
 
 ## Testing 
 
-Unit tests are located [here](../Test/Linql.Server.Test/).
+Unit tests are located [here](./Linql.Server.Test/).
