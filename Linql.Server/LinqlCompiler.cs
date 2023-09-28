@@ -114,21 +114,24 @@ namespace Linql.Server
         {
             object result = Queryable;
 
-            foreach(LinqlExpression exp in Search.Expressions)
+            if (Search.Expressions != null)
             {
-                if (exp is LinqlConstant constant && constant.ConstantType.TypeName == nameof(LinqlSearch))
+                foreach (LinqlExpression exp in Search.Expressions)
                 {
-                    result = await this.TopLevelFunction(constant.Next as LinqlFunction, Queryable);
+                    if (exp is LinqlConstant constant && constant.ConstantType.TypeName == nameof(LinqlSearch))
+                    {
+                        result = await this.TopLevelFunction(constant.Next as LinqlFunction, Queryable);
+                    }
+                    else if (exp is LinqlFunction function)
+                    {
+                        result = await this.TopLevelFunction(function, Queryable);
+                    }
+                    else
+                    {
+                        throw new Exception($"Linql Search did not start with a function, or a LinqlSearch, but started with {exp.GetType().Name}");
+                    }
+                    result = await result.UnwrapTaskAsync();
                 }
-                else if (exp is LinqlFunction function)
-                {
-                    result = await this.TopLevelFunction(function, Queryable);
-                }
-                else
-                {
-                    throw new Exception($"Linql Search did not start with a function, or a LinqlSearch, but started with {exp.GetType().Name}");
-                }
-                result = await result.UnwrapTaskAsync();
             }
 
             return result;
