@@ -272,6 +272,9 @@ namespace Linql.Server
             left = this.HandleNullConstants(left, right);
             right = this.HandleNullConstants(right, left);
 
+            left = this.HandleNumbers(left, right);
+            right = this.HandleNumbers(right, left);
+
             left = this.HandleDates(left, right);
             right = this.HandleDates(right, left);
 
@@ -279,6 +282,17 @@ namespace Linql.Server
             return binaryExpression;
 
         }
+
+        private Expression HandleNumbers(Expression left, Expression right)
+        {
+            if(left.Type == typeof(int) && right.Type == typeof(long))
+            {
+                left = Expression.Convert(left, right.Type);
+            }
+           
+            return left;
+        }
+
 
         private Expression HandleDates(Expression left, Expression right)
         {
