@@ -100,6 +100,10 @@ namespace Linql.Server
 
             if (value is JsonElement json)
             {
+                if(json.ValueKind == JsonValueKind.Number && foundType == typeof(int) && value.ToString().Contains("."))
+                {
+                    foundType = typeof(decimal);
+                }
                 value = json.Deserialize(foundType, this.JsonOptions);
             }
 
@@ -269,6 +273,9 @@ namespace Linql.Server
 
             MethodInfo binaryMethod = foundMethods.FirstOrDefault();
 
+            left = this.NullableValue(left);
+            right = this.NullableValue(right);
+
             left = this.HandleNullConstants(left, right);
             right = this.HandleNullConstants(right, left);
 
@@ -283,9 +290,20 @@ namespace Linql.Server
 
         }
 
+        private Expression NullableValue(Expression Expression)
+        {
+            if(Nullable.GetUnderlyingType(Expression.Type) != null) 
+            {
+                PropertyInfo valueProperty = Expression.Type.GetProperty("Value");
+                Expression = Expression.Property(Expression, valueProperty);
+            }
+            return Expression;
+        }
+
         private Expression HandleNumbers(Expression left, Expression right)
         {
-            if(left.Type == typeof(int) && right.Type == typeof(long))
+            List<Type> numberTypeCandidates = new List<Type>() {  typeof(int), typeof(decimal) }; 
+            if(numberTypeCandidates.Contains(left.Type) && right.Type != left.Type)
             {
                 left = Expression.Convert(left, right.Type);
             }
@@ -296,7 +314,7 @@ namespace Linql.Server
 
         private Expression HandleDates(Expression left, Expression right)
         {
-            if(left.Type == typeof(string) && right.Type == typeof(DateTime) && left is ConstantExpression constant)
+            if(left.Type == typeof(string) && (right.Type == typeof(DateTime) || right.Type == typeof(DateTime?)) && left is ConstantExpression constant)
             {
                 DateTime stringToTime = DateTime.Parse(constant.Value as string);
                 return Expression.Constant(stringToTime);
