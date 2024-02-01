@@ -9,6 +9,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Linql.Server
@@ -227,7 +228,7 @@ namespace Linql.Server
             };
             argTypes.AddRange(argExpressions.Select(r => r.Type));
 
-            MethodInfo foundMethod = this.FindMethod(queryableType, Function, argTypes);
+            MethodInfo foundMethod = this.FindMethod(queryableType, Function, argExpressions, argTypes);
 
             MethodInfo madeMethod = this.CompileGenericMethod(foundMethod, genericType, argExpressions);
 
@@ -521,7 +522,7 @@ namespace Linql.Server
         protected MethodInfo FindMethod(Type FunctionObjectType, LinqlFunction function, List<Expression> Args)
         {
             IEnumerable<Type> argTypes = Args.Select(r => r.Type);
-            return this.FindMethod(FunctionObjectType, function, argTypes);
+            return this.FindMethod(FunctionObjectType, function, Args, argTypes);
 
         }
 
@@ -532,7 +533,7 @@ namespace Linql.Server
         /// <param name="function">The LinqlFunction to try and find</param>
         /// <param name="Args">The Arguments to the LinqlFunction</param>
         /// <returns>A MethodInfo that matches the supplied arguments, or null.</returns>
-        protected MethodInfo FindMethod(Type FunctionObjectType, LinqlFunction function, IEnumerable<Type> ArgTypes)
+        protected MethodInfo FindMethod(Type FunctionObjectType, LinqlFunction function, List<Expression> ArgExpressions, IEnumerable<Type> ArgTypes)
         {
             IEnumerable<MethodInfo> candidates = this.GetMethodsForType(FunctionObjectType);
 
@@ -560,7 +561,7 @@ namespace Linql.Server
 
             IEnumerable<MethodInfo> argMatchFunctions = trimmedMethods.Where(r =>
             {
-                IEnumerable<Type> parameterTypes = r.GetParameters().Select(s => s.ParameterType);
+                IEnumerable<Type> parameterTypes = r.GetParameters().Select(s => s.ParameterType).Where(s => s != typeof(CancellationToken));
 
                 List<Type> argTypes = new List<Type>();
 
@@ -615,6 +616,11 @@ namespace Linql.Server
             if (found == null)
             {
                 throw new Exception($"Unable to find function {function.FunctionName} on type {FunctionObjectType.FullName} with args of type {ArgTypes}.");
+            }
+
+            if(found.GetParameters().LastOrDefault()?.ParameterType == typeof(CancellationToken))
+            {
+                ArgExpressions.Add(Expression.Constant(new CancellationToken()));
             }
 
             return found;
