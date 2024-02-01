@@ -1,6 +1,7 @@
 ﻿using Linql.Core;
 using Linql.Core.Test;
 using Linql.Test.Files;
+using System.Linq.Expressions;
 using System.Reflection;
 using System.Text.Json;
 
@@ -39,7 +40,7 @@ namespace Linql.Server.Test
 
             Type[] functionArgs = new Type[] { typeof(IQueryable<DataModel>), typeof(Func<DataModel, bool>) };
 
-            MethodInfo foundMethod = this.FindMethod(typeof(IQueryable<DataModel>), function, functionArgs);
+            MethodInfo foundMethod = this.FindMethod(typeof(IQueryable<DataModel>), function, new List<Expression>(), functionArgs);
 
             Assert.That(foundMethod, Is.EqualTo(methodToComapre));
 
@@ -56,7 +57,7 @@ namespace Linql.Server.Test
             Type[] functionArgs = new Type[] { typeof(EnumerableQuery<DataModel>), typeof(Func<DataModel, bool>) };
 
 
-            MethodInfo foundMethod = this.FindMethod(typeof(EnumerableQuery<DataModel>), function, functionArgs);
+            MethodInfo foundMethod = this.FindMethod(typeof(EnumerableQuery<DataModel>), function, new List<Expression>(), functionArgs);
 
             Assert.That(foundMethod, Is.EqualTo(methodToComapre));
         }
@@ -71,7 +72,7 @@ namespace Linql.Server.Test
             MethodInfo methodToComapre = typeof(Enumerable).GetMethods().First(r => r.Name == "Where");
             Type[] functionArgs = new Type[] { typeof(List<DataModel>), typeof(Func<DataModel, bool>) };
 
-            MethodInfo foundMethod = this.FindMethod(typeof(List<DataModel>), function, functionArgs);
+            MethodInfo foundMethod = this.FindMethod(typeof(List<DataModel>), function, new List<Expression>(), functionArgs);
 
             Assert.That(foundMethod, Is.EqualTo(methodToComapre));
         }
@@ -87,7 +88,7 @@ namespace Linql.Server.Test
 
             Type[] functionArgs = new Type[] { typeof(IEnumerable<DataModel>), typeof(Func<DataModel, bool>) };
 
-            MethodInfo foundMethod = this.FindMethod(typeof(List<DataModel>), function, functionArgs);
+            MethodInfo foundMethod = this.FindMethod(typeof(List<DataModel>), function, new List<Expression>(), functionArgs);
 
             Assert.That(foundMethod, Is.EqualTo(methodToComapre));
         }
@@ -116,27 +117,27 @@ namespace Linql.Server.Test
             Type[] functionArgs = new Type[] { typeof(IEnumerable<DataModel>), typeof(Func<DataModel, bool>) };
 
 
-            MethodInfo foundMethod = this.FindMethod(queryableType, function, functionArgs);
+            MethodInfo foundMethod = this.FindMethod(queryableType, function, new List<Expression>(), functionArgs);
 
             Assert.That(foundMethod, Is.EqualTo(enumerableWhere));
 
             this.ValidAssemblies.Add(typeof(Queryable).Assembly);
 
 
-            foundMethod = this.FindMethod(queryableType, function, functionArgs);
+            foundMethod = this.FindMethod(queryableType, function, new List<Expression>(), functionArgs);
 
             Assert.That(foundMethod, Is.EqualTo(enumerableWhere));
 
             this.UseCache = false;
 
-            foundMethod = this.FindMethod(queryableType, function, functionArgs);
+            foundMethod = this.FindMethod(queryableType, function, new List<Expression>(), functionArgs);
 
             Assert.That(foundMethod, Is.EqualTo(queryableWhere));
 
             this.UseCache = true;
             this.ClearMethodCacheForType(queryableType);
 
-            foundMethod = this.FindMethod(queryableType, function, functionArgs);
+            foundMethod = this.FindMethod(queryableType, function, new List<Expression>(), functionArgs);
 
             Assert.That(foundMethod, Is.EqualTo(queryableWhere));
         }
@@ -154,7 +155,7 @@ namespace Linql.Server.Test
             Type[] functionArgs = new Type[] { typeof(IQueryable<DataModel>), typeof(Func<,>) };
 
 
-            MethodInfo foundMethod = this.FindMethod(typeof(IQueryable<DataModel>), function, functionArgs);
+            MethodInfo foundMethod = this.FindMethod(typeof(IQueryable<DataModel>), function, new List<Expression>(), functionArgs);
 
             Assert.That(foundMethod, Is.EqualTo(methodToComapre));
         }
@@ -171,7 +172,7 @@ namespace Linql.Server.Test
             MethodInfo methodToComapre = typeof(Enumerable).GetMethods().First(r => r.Name == "Select");
             Type[] functionArgs = new Type[] { typeof(IQueryable<DataModel>), typeof(Func<,>) };
 
-            MethodInfo foundMethod = this.FindMethod(typeof(IEnumerable<DataModel>), function, functionArgs);
+            MethodInfo foundMethod = this.FindMethod(typeof(IEnumerable<DataModel>), function, new List<Expression>(), functionArgs);
 
             Assert.That(foundMethod, Is.EqualTo(methodToComapre));
         }
@@ -197,7 +198,7 @@ namespace Linql.Server.Test
 
             Type[] functionArgs = new Type[] { };
 
-            Assert.Catch(() => this.FindMethod(typeof(IEnumerable<DataModel>), function, functionArgs));
+            Assert.Catch(() => this.FindMethod(typeof(IEnumerable<DataModel>), function, new List<Expression>(), functionArgs));
 
         }
 
