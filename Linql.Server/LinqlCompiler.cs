@@ -78,7 +78,7 @@ namespace Linql.Server
                 this.MethodCache = MethodCache;
             }
 
-            if(JsonOptions == null)
+            if (JsonOptions == null)
             {
                 this.JsonOptions = new JsonSerializerOptions
                 {
@@ -121,11 +121,14 @@ namespace Linql.Server
                 {
                     if (exp is LinqlConstant constant && constant.ConstantType.TypeName == nameof(LinqlSearch))
                     {
-                        result = await this.TopLevelFunction(constant.Next as LinqlFunction, Queryable);
+                        if (constant.Next != null)
+                        {
+                            result = await this.TopLevelFunction(constant.Next as LinqlFunction, Queryable);
+                        }
                     }
-                    else if (exp is LinqlFunction function)
+                    else if (exp is LinqlFunction function && typeof(IEnumerable).IsAssignableFrom(result.GetType()))
                     {
-                        result = await this.TopLevelFunction(function, Queryable);
+                        result = await this.TopLevelFunction(function, ((IEnumerable) result));
                     }
                     else
                     {
@@ -144,11 +147,11 @@ namespace Linql.Server
         /// <param name="Hook">The LinqlCompilerHook</param>
         public void AddHook(LinqlCompilerHook Hook)
         {
-            if(Hook is LinqlBeforeExecutionHook before)
+            if (Hook is LinqlBeforeExecutionHook before)
             {
                 this.BeforeHooks.Add(before);
             }
-            else if(Hook is LinqlAfterExecutionHook after)
+            else if (Hook is LinqlAfterExecutionHook after)
             {
                 this.AfterHooks.Add(after);
             }
@@ -197,7 +200,7 @@ namespace Linql.Server
         {
             this.Parameters.Clear();
 
-            if(Function == null)
+            if (Function == null)
             {
                 return Queryable;
             }
@@ -219,7 +222,7 @@ namespace Linql.Server
                     {
                         return this.Visit(r, genericType);
                     }
-            }).ToList();
+                }).ToList();
             }
 
             List<Type> argTypes = new List<Type>
@@ -273,7 +276,7 @@ namespace Linql.Server
                         if (r.parameter.ParameterType.IsFunc())
                         {
                             Delegate compiledDeligate = convertedLambda.Compile();
-                            
+
                             methodArgs.Add(compiledDeligate);
                         }
                         else
@@ -281,7 +284,7 @@ namespace Linql.Server
                             methodArgs.Add(convertedLambda);
                         }
                     }
-                    else if(r.arg is ConstantExpression exp)
+                    else if (r.arg is ConstantExpression exp)
                     {
                         methodArgs.Add(exp.Value);
                     }
@@ -328,7 +331,7 @@ namespace Linql.Server
             {
                 madeMethod = GenericMethod;
             }
-            else 
+            else
             {
                 madeMethod = GenericMethod;
                 IEnumerable<Type> funGenericArgs = GenericMethod.GetGenericArguments();
@@ -457,7 +460,7 @@ namespace Linql.Server
             {
                 typeName = typeof(List<>).Name;
             }
-            else if(Type.TypeName == "object")
+            else if (Type.TypeName == "object")
             {
                 typeName = typeof(object).Name;
             }
@@ -498,7 +501,7 @@ namespace Linql.Server
 
                 if (genericParameterType.IsGenericParameter)
                 {
-                    return genericParameterType.GetInterfaces().Any(s => s.IsAssignableFrom(extendTypeDef)) 
+                    return genericParameterType.GetInterfaces().Any(s => s.IsAssignableFrom(extendTypeDef))
                     || genericParameterType.BaseType.GetGenericTypeDefinitionSafe().IsAssignableFrom(extendedType);
                 }
                 else
@@ -539,7 +542,7 @@ namespace Linql.Server
 
             IEnumerable<MethodInfo> trimmedMethods = candidates.Where(r => r.Name == function.FunctionName);
 
-            if(trimmedMethods.Any() == false)
+            if (trimmedMethods.Any() == false)
             {
                 trimmedMethods = candidates.Where(r => r.Name.Contains(function.FunctionName));
             }
@@ -552,10 +555,10 @@ namespace Linql.Server
             bool argTypesSeemsStatic = false;
 
             Type firstArgType = ArgTypes.FirstOrDefault();
-            
-            if(firstArgType != null && firstArgType != typeof(string))
+
+            if (firstArgType != null && firstArgType != typeof(string))
             {
-                argTypesSeemsStatic = FunctionObjectType.IsAssignableFromOrImplements(firstArgType) 
+                argTypesSeemsStatic = FunctionObjectType.IsAssignableFromOrImplements(firstArgType)
                     || firstArgType.IsAssignableFromOrImplements(FunctionObjectType);
             }
 
@@ -618,7 +621,7 @@ namespace Linql.Server
                 throw new Exception($"Unable to find function {function.FunctionName} on type {FunctionObjectType.FullName} with args of type {ArgTypes}.");
             }
 
-            if(found.GetParameters().LastOrDefault()?.ParameterType == typeof(CancellationToken))
+            if (found.GetParameters().LastOrDefault()?.ParameterType == typeof(CancellationToken))
             {
                 ArgExpressions.Add(Expression.Constant(new CancellationToken()));
             }
