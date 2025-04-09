@@ -49,7 +49,24 @@ namespace Linql.Server.EF6.Test
             });
         }
 
-      
+        [Test]
+        public void FlatExpressions()
+        {
+            Assert.DoesNotThrow(() =>
+            {
+                LinqlSearch<Building> search = new LinqlSearch<Building>();
+                search.LinqlProvider.FlattenTopLevelFunctions = true;
+                var testSearch = search.OrderBy(r => r.BuildingID).ThenByDescending(r => r.BuildingID).ToListAsyncSearch();
+
+                List<Building> data = this.Compiler.Execute<List<Building>>(testSearch, this.Context.Buildings);
+
+                Assert.That(data.Count(), Is.EqualTo(this.Context.Buildings.Count()));
+
+
+            });
+        }
+
+
 
     }
 }
