@@ -522,7 +522,7 @@ namespace Linql.Server
         /// <param name="function">The LinqlFunction to try and find</param>
         /// <param name="Args">The Arguments to the LinqlFunction</param>
         /// <returns>A MethodInfo that matches the supplied arguments, or null.</returns>
-        protected MethodInfo FindMethod(Type FunctionObjectType, LinqlFunction function, List<Expression> Args, CancellationToken? CancellationToken)
+        protected MethodInfo FindMethod(Type FunctionObjectType, LinqlFunction function, List<Expression> Args, CancellationToken? CancellationToken = null)
         {
             IEnumerable<Type> argTypes = Args.Select(r => r.Type);
             return this.FindMethod(FunctionObjectType, function, Args, argTypes, CancellationToken);
@@ -536,7 +536,7 @@ namespace Linql.Server
         /// <param name="function">The LinqlFunction to try and find</param>
         /// <param name="Args">The Arguments to the LinqlFunction</param>
         /// <returns>A MethodInfo that matches the supplied arguments, or null.</returns>
-        protected MethodInfo FindMethod(Type FunctionObjectType, LinqlFunction function, List<Expression> ArgExpressions, IEnumerable<Type> ArgTypes, CancellationToken? CancellationToken)
+        protected MethodInfo FindMethod(Type FunctionObjectType, LinqlFunction function, List<Expression> ArgExpressions, IEnumerable<Type> ArgTypes, CancellationToken? CancellationToken = null)
         {
             IEnumerable<MethodInfo> candidates = this.GetMethodsForType(FunctionObjectType);
 
