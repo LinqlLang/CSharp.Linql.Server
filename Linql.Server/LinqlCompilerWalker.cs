@@ -139,7 +139,7 @@ namespace Linql.Server
 
             Expression objectExpression = Previous;
 
-            MethodInfo foundMethod = this.FindMethod(objectExpression.Type, Function, argExpressions);
+            MethodInfo foundMethod = this.FindMethod(objectExpression.Type, Function, argExpressions, null);
             Type genericMethodType = objectExpression.Type;
 
 

@@ -111,7 +111,7 @@ namespace Linql.Server
         /// <param name="Queryable">The Datastore to query</param>
         /// <returns>A result as an object</returns>
         /// <exception cref="Exception">Throws when a LinqlSearch does not start with a Function or a Constant of type LinqlSearch</exception>
-        public async Task<object> ExecuteAsync(LinqlSearch Search, IEnumerable Queryable)
+        public async Task<object> ExecuteAsync(LinqlSearch Search, IEnumerable Queryable, CancellationToken? Token = null)
         {
             object result = Queryable;
 
@@ -123,12 +123,12 @@ namespace Linql.Server
                     {
                         if (constant.Next != null)
                         {
-                            result = await this.TopLevelFunction(constant.Next as LinqlFunction, Queryable);
+                            result = await this.TopLevelFunction(constant.Next as LinqlFunction, Queryable, Token);
                         }
                     }
                     else if (exp is LinqlFunction function && typeof(IEnumerable).IsAssignableFrom(result.GetType()))
                     {
-                        result = await this.TopLevelFunction(function, ((IEnumerable) result));
+                        result = await this.TopLevelFunction(function, ((IEnumerable) result), Token);
                     }
                     else
                     {
@@ -196,7 +196,7 @@ namespace Linql.Server
         /// <param name="Function">The Starting Function.</param>
         /// <param name="Queryable">The datastore to query</param>
         /// <returns>The result as an object</returns>
-        protected async Task<object> TopLevelFunction(LinqlFunction Function, IEnumerable Queryable)
+        protected async Task<object> TopLevelFunction(LinqlFunction Function, IEnumerable Queryable, CancellationToken? Token = null)
         {
             this.Parameters.Clear();
 
@@ -231,7 +231,7 @@ namespace Linql.Server
             };
             argTypes.AddRange(argExpressions.Select(r => r.Type));
 
-            MethodInfo foundMethod = this.FindMethod(queryableType, Function, argExpressions, argTypes);
+            MethodInfo foundMethod = this.FindMethod(queryableType, Function, argExpressions, argTypes, Token);
 
             MethodInfo madeMethod = this.CompileGenericMethod(foundMethod, genericType, argExpressions);
 
@@ -522,10 +522,10 @@ namespace Linql.Server
         /// <param name="function">The LinqlFunction to try and find</param>
         /// <param name="Args">The Arguments to the LinqlFunction</param>
         /// <returns>A MethodInfo that matches the supplied arguments, or null.</returns>
-        protected MethodInfo FindMethod(Type FunctionObjectType, LinqlFunction function, List<Expression> Args)
+        protected MethodInfo FindMethod(Type FunctionObjectType, LinqlFunction function, List<Expression> Args, CancellationToken? CancellationToken)
         {
             IEnumerable<Type> argTypes = Args.Select(r => r.Type);
-            return this.FindMethod(FunctionObjectType, function, Args, argTypes);
+            return this.FindMethod(FunctionObjectType, function, Args, argTypes, CancellationToken);
 
         }
 
@@ -536,7 +536,7 @@ namespace Linql.Server
         /// <param name="function">The LinqlFunction to try and find</param>
         /// <param name="Args">The Arguments to the LinqlFunction</param>
         /// <returns>A MethodInfo that matches the supplied arguments, or null.</returns>
-        protected MethodInfo FindMethod(Type FunctionObjectType, LinqlFunction function, List<Expression> ArgExpressions, IEnumerable<Type> ArgTypes)
+        protected MethodInfo FindMethod(Type FunctionObjectType, LinqlFunction function, List<Expression> ArgExpressions, IEnumerable<Type> ArgTypes, CancellationToken? CancellationToken)
         {
             IEnumerable<MethodInfo> candidates = this.GetMethodsForType(FunctionObjectType);
 
@@ -623,7 +623,11 @@ namespace Linql.Server
 
             if (found.GetParameters().LastOrDefault()?.ParameterType == typeof(CancellationToken))
             {
-                ArgExpressions.Add(Expression.Constant(new CancellationToken()));
+                if(CancellationToken == null)
+                {
+                    CancellationToken = new CancellationToken();
+                }
+                ArgExpressions.Add(Expression.Constant(CancellationToken));
             }
 
             return found;
